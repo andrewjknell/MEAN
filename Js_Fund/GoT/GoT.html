@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("#stark").click(function () {
+                $.get("https://anapioficeandfire.com/api/houses/362", display);
+            })
+            $("#targaryen").click(function () {
+                $.get("https://anapioficeandfire.com/api/houses/378", display);
+            })
+            $("#lan").click(function () {
+                $.get("https://anapioficeandfire.com/api/houses/229", display);
+            })
+            $("#bar").click(function () {
+                $.get("https://anapioficeandfire.com/api/houses/17", display);
+            })
+            function display(data) {
+                $(".info").append("<p>" + data.name + "</p>");
+                $(".info").append("<p>" + data.words + "</p>");
+                $(".info").append("<p>" + data.titles + "</p>");
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <img src="stark.jpg" id="stark" alt="stark">
+    <img src="lannister.jpg" id="lan" alt="lan">
+    <img src="targaryen.jpg" id="targaryen" alt="tar">
+    <img src="baratheon.png" id="bar" alt="bar">
+    <div class="info">
+        <h2>house details</h2>
+    </div>
+</body>
+
+</html>

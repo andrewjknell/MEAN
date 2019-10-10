@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contain">
+        <h1>Restful Tasks API</h1>
+        <div class="alltasks">
+            <h2>All the tasks:</h2>
+            <button (click)="getAllTasks()" >Click me!</button>
+            <li *ngFor="let task of tasks">{{task.title}}<button (click)="getOneTask(task._id)">show</button> </li>
+        </div>
+        <div *ngIf="task.desc" class="showtask">
+            {{task.desc}}
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.container{
+    border: 1px solid black;
+    margin: 5% auto 0 auto;
+    width: 60%;
+    padding: 2%;
+   
+}
+.one, .two{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}

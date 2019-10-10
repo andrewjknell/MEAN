@@ -1,0 +1,11 @@
+img{
+    width: 23%;
+    height: 200px;
+    display: inline-block;
+}
+.info{
+    margin: auto;
+    border: 1px black solid;
+    height: 300px;
+    width: 300px;
+}

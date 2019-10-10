@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>The Dojo Message Board</h1>
+        <hr>
+    </div>
+    <div class="input">
+        <h4>Post Message</h4>
+        <form action="/message" method="post">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control w-25" name="name">
+            <label for="message">Message:</label>
+            <textarea type="text" rows="3" class="form-control" name="message"></textarea>
+            <button type="submit" class="btn btn-success mt-2 float-right">Message</button>
+        </form>
+        <% var list = messages.slice(0).reverse() %>
+        <% for(message of list){ %>
+        <div class="message">
+            <h4>Message:</h4>
+            <h5>Name: <%= message.name %></h5>
+            <h5>Message: <%= message.message %></h5>
+            <% var comments = message.comment%>
+            <% var revComments = comments.slice(0).reverse()%>
+            <% if(revComments) {%>
+            <h4 class="ml-5">Comments:</h4>
+            <% } %>
+            <% for(post of revComments){ %>
+            <div class="ml-5">
+                <h6 class="ml-5">name: <%= post.name %></h6>
+                <h6 class="ml-5">comment: <%= post.comment %></h6>
+                <br>
+            </div>
+            <% } %>
+            <div class="comments">
+                <form action="/comment/<%= message.id %>" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control w-25" name="name">
+                    <label for="message">Message:</label>
+                    <textarea type="text" rows="3" class="form-control" name="comment"></textarea>
+                    <button type="submit" class="btn btn-success mt-2 float-right">Post Comment</button>
+                </form>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</body>
+
+</html>

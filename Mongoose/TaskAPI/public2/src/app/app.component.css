@@ -1,0 +1,19 @@
+.contain{
+    border-radius: 25px;
+    border: rgb(255, 136, 0) solid 4px;
+    text-align: center;
+    padding: 1%;
+}
+.alltasks{
+    border-radius: 25px;
+    border: rgb(0, 89, 255) solid 4px;
+    text-align: center;
+    padding: 1%;
+}
+.showtask{
+    border-radius: 25px;
+    border: rgb(8, 104, 29) solid 4px;
+    text-align: center;
+    padding: 1%;
+}
+
