@@ -15,3 +15,33 @@ function fizzBuzz(n){
     }
 }
 fizzBuzz(100);
+}
+else if(i%5 == 0){
+    console.log('buzz')
+}
+else{
+    console.log(i);
+}
+}
+}
+fizzBuzz(100);
+}
+else if(i%5 == 0){
+    console.log('buzz')
+}
+else{
+    console.log(i);
+}
+}
+}
+fizzBuzz(100);
+}
+else if(i%5 == 0){
+    console.log('buzz')
+}
+else{
+    console.log(i);
+}
+}
+}
+fizzBuzz(100);
